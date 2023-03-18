@@ -1,28 +1,20 @@
 import { client } from '$lib/graphql-client';
-import { gql } from 'graphql-request';
+import { authorsQuery, projectsQuery } from '$lib/graphql-queries';
 import type { PageServerLoad } from './$types';
 
 export const load = (async () => {
-	const query = gql`
-		{
-			projects {
-				name
-				slug
-				description
-				demo
-				sourceCode
-				image {
-					url
-				}
-			}
-		}
-	`;
+	const [authorReq, projectsReq] = await Promise.all([
+		client.request(authorsQuery),
+		client.request(projectsQuery)
+	]);
 
-	const projects = await client.request(query);
+	const { authors } = authorReq;
+	const { projects } = projectsReq;
 
 	return {
 		props: {
-			projects
+			projects,
+			authors
 		}
 	};
 }) satisfies PageServerLoad;
