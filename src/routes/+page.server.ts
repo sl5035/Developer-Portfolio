@@ -18,11 +18,11 @@ export const load = (async () => {
 		}
 	`;
 
-	const response = await client.request(query);
+	const projects = await client.request(query);
 
 	return {
-		projects: {
-			response
+		props: {
+			projects
 		}
 	};
 }) satisfies PageServerLoad;
