@@ -25,7 +25,7 @@
 	</div>
 	<div>
 		<p>
-			Copyright &copy; {`${new Date().getFullYear()}`} - All right reserved by ME
+			Copyright &copy; {`${new Date().getFullYear()}`} - All right reserved by Robin Lee
 		</p>
 	</div>
 </footer>
