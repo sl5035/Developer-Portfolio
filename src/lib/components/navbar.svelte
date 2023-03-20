@@ -12,7 +12,12 @@
 		<ul class="bg-neutral rounded-box shadow text-neutral-content p-2 w-52 menu dropdown-content ">
 			<a class="btn btn-ghost btn-sm rounded-btn" href="/projects"> Portfolio </a>
 			<a class="btn btn-ghost btn-sm rounded-btn" href="/posts"> Blog </a>
-			<a class="btn btn-ghost btn-sm rounded-btn" href="/about"> About </a>
+			<a
+				class="btn btn-ghost btn-sm rounded-btn"
+				href="https://media.graphassets.com/CsozvxWJSAuZ1KcQvGfg"
+			>
+				Resume
+			</a>
 		</ul>
 	</div>
 
@@ -20,7 +25,12 @@
 		<div class="flex items-stretch">
 			<a class="btn btn-ghost btn-sm rounded-btn" href="/projects"> Portfolio </a>
 			<a class="btn btn-ghost btn-sm rounded-btn" href="/posts"> Blog </a>
-			<a class="btn btn-ghost btn-sm rounded-btn" href="/about"> About </a>
+			<a
+				class="btn btn-ghost btn-sm rounded-btn"
+				href="https://media.graphassets.com/CsozvxWJSAuZ1KcQvGfg"
+			>
+				Resume
+			</a>
 			<div class="px-4">
 				<ThemeSelect />
 			</div>
