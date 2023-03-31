@@ -1,6 +1,5 @@
 <script>
 	import Navbar from '$lib/components/navbar.svelte';
-	import Footer from '$lib/components/footer.svelte';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
 	import '../app.postcss';
@@ -48,21 +47,6 @@
 			class="shape-fill"
 		/>
 	</svg>
-
-	<!-- <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
-		<defs>
-			<linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
-				<stop stop-color="#57BBC1" stop-opacity=".25" offset="0%" />
-				<stop stop-color="#015871" offset="100%" />
-			</linearGradient>
-		</defs>
-		<path
-			fill="url(#a)"
-			fill-rule="evenodd"
-			d="M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z"
-			transform="matrix(-1 0 0 1 1600 0)"
-		/>
-	</svg> -->
 </div>
 
 <div class="wave-bottom">
@@ -102,26 +86,8 @@
 		/>
 		<!-- </pattern> -->
 	</svg>
-
-	<!-- <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
-		<defs>
-			<linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
-				<stop stop-color="#57BBC1" stop-opacity=".25" offset="0%" />
-				<stop stop-color="#015871" offset="100%" />
-			</linearGradient>
-		</defs>
-		<path
-			fill="url(#a)"
-			fill-rule="evenodd"
-			d="M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z"
-			transform="matrix(-1 0 0 1 1600 0)"
-			class="shape-fill"
-		/>
-	</svg> -->
 </div>
 
-<main class="container max-w-7xl mx-auto px-0 xl:mb-15 relative pt-14">
+<main class="container max-w-7xl mx-auto px-0 xl:mb-15 relative pt-8">
 	<slot />
 </main>
-
-<!-- <Footer /> -->

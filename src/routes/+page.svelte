@@ -34,23 +34,9 @@
 	const randomColor1 = getRandomColor();
 	const randomColor2 = getRandomColor();
 
-	//const randomColor1 = '#' + (((1 << 24) * Math.random()) | 0).toString(16);
-	//const randomColor2 = '#' + (((1 << 24) * Math.random()) | 0).toString(16);
-
-	// const mainMessageClass =
-	// 	'main-message before:bg-gradient-to-b before:from-[' +
-	// 	randomColor2 +
-	// 	'] before:to-[' +
-	// 	randomColor1 +
-	// 	']';
-
 	const mainMessageClass = 'main-message';
 
 	function selectProject(slug: any) {
-		console.log(slug);
-
-		console.log(projects);
-
 		sProject = projects.find((arr: { slug: any }) => arr.slug === slug);
 
 		console.log('slug: ' + slug + ' SProject:');
@@ -105,7 +91,7 @@
 		<div class="flex flex-col justify-items-center">
 			<header class="mb-3 lg:mb-4 2xl:mb-24 ml-4 mt-4 flex flex-row">
 				<div class="w-4/5 text-3xl md:text-base">
-					<p on:click={selectHome}>Portfolio and Blog</p>
+					<p on:click={selectHome}>Portfolio</p>
 				</div>
 
 				<IconsNav />
@@ -118,7 +104,7 @@
 					<div class="flex project-body">
 						<!-- {#if isDefault} -->
 						<!-- <p>Test</p> -->
-						{#each authors as { name, intro, picture: { url } }}
+						{#each authors as { name, intro }}
 							<!-- <div class="flex"> -->
 							<div class={isDefault ? projectScaled : projectUnScaled}>
 								<div id="welcome">
@@ -141,7 +127,9 @@
 								</div>
 
 								<span class={mainMessageClass}>
-									<h2 class="text-3xl md:text-xl mb-4 font-bold tracking-wider">{name}</h2>
+									<h2 class="text-3xl md:text-xl mb-4 font-bold tracking-wider underline">
+										<a href="/about">{name}</a>
+									</h2>
 									<p class="text-2xl md:text-lg mb-4">{intro}</p>
 								</span>
 							</div>
