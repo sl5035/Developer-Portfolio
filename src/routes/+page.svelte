@@ -3,6 +3,7 @@
 	import ProjectCard from '$lib/components/project-card.svelte';
 	import IconsNav from '$lib/components/icons-nav.svelte';
 	import type { PageData } from './$types';
+	import { marked } from 'marked';
 	export let data: PageData;
 
 	const { projects } = data.props;
@@ -127,10 +128,10 @@
 								</div>
 
 								<span class={mainMessageClass}>
-									<h2 class="text-3xl md:text-xl mb-4 font-bold tracking-wider underline">
+									<h2 class="text-3xl md:text-xl mb-4 font-bold tracking-wider underline mt-6">
 										<a href="/about">{name}</a>
 									</h2>
-									<p class="text-2xl md:text-lg mb-4">{intro}</p>
+									<p class="text-2xl md:text-lg mb-4">{@html marked(intro)}</p>
 								</span>
 							</div>
 
@@ -147,7 +148,7 @@
 								>
 									<span class={mainMessageClass}>
 										<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-										<!-- <p class="text-xl mb-4">{sProject.description}</p> -->
+										<p class="text-xl mb-4">{sProject.description}</p>
 										<button class="project-link text-2xl lg:text-base"
 											><a href="/projects/{slug}"> View </a></button
 										>
@@ -182,7 +183,7 @@
 
 			<div class="absolute bottom-24 right-24 lg:bottom-20 lg:right-20 text-sm italic">
 				<p>
-					Copyright &copy; {`${new Date().getFullYear()}`} - All rights reserved by Robin Lee
+					&copy; {`${new Date().getFullYear()}`} Robin Lee
 				</p>
 			</div>
 		</div>

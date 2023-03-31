@@ -23,7 +23,7 @@
 	<p on:click={(location.href = '/')}>Portfolio</p>
 </div> -->
 
-<div class="flex mb-40 items-end">
+<div class="flex mb-40 items-start">
 	<div class="mr-6">
 		<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
 		<p class="text-xl mb-4">{@html marked(bio)}</p>
