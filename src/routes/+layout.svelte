@@ -120,7 +120,7 @@
 	</svg> -->
 </div>
 
-<main class="container max-w-7xl mx-auto px-0 xl:mb-10 relative pt-6">
+<main class="container max-w-7xl mx-auto px-0 xl:mb-10 relative pt-10">
 	<slot />
 </main>
 
