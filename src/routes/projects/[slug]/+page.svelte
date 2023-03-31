@@ -7,11 +7,11 @@
 </script>
 
 <svelte:head>
-	<title>My Portfolio | {project.name}</title>
+	<title>Robin Lee Portfolio | {project.name}</title>
 </svelte:head>
 
-<div class="sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">
-	<img class="rounded-lg" src={project.image[0].url} alt={project.title} />
+<div class="flex justify-center items-center sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">
+	<img class="rounded-lg" src={project.image[0].url} alt={project.title} width="250" height="250" />
 </div>
 
 <h1 class="text-4xl font-semibold mb-5">{project.name}</h1>
@@ -27,10 +27,12 @@
 </div>
 
 <div class="mb-5 prose flex prose-a:text-primary hover:prose-a:text-primary-focus">
-	<a class="mr-5" href={project.demo}>Demo</a>
+	{#if project.demo}
+		<a class="mr-5" href={project.demo}>Demo</a>
+	{/if}
 	<a href={project.sourceCode}>Source Code</a>
 </div>
 
-<article class="prose prose-xl">
+<article class="absolute overflow-x-scroll">
 	{@html marked(project.description)}
 </article>

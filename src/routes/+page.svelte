@@ -148,7 +148,7 @@
 								>
 									<span class={mainMessageClass}>
 										<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-										<p class="text-xl mb-4">{sProject.description}</p>
+										<p class="text-xl mb-4">{sProject.summary}</p>
 										<button class="project-link text-2xl lg:text-base"
 											><a href="/projects/{slug}"> View </a></button
 										>
