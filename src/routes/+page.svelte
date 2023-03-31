@@ -71,10 +71,9 @@
 </script>
 
 <svelte:head>
-	<title>My Portfolio project</title>
+	<title>Robin Lee Portfolio</title>
 </svelte:head>
 
-<!-- <h1 class="font-bold text-center mb-20 text-5xl">Welcome to my Portfolio</h1> -->
 <div
 	class="inner-container"
 	style="/*max-height: 791px;*/ --grad1:{randomColor1}; --grad2:{randomColor2}"
