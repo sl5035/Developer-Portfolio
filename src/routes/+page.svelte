@@ -88,9 +88,9 @@
 		>
 	</div>
 
-	<div class="p-8">
+	<div class="p-8 relative">
 		<div class="flex flex-col justify-items-center">
-			<header class="mb-3 lg:mb-4 2xl:mb-24 ml-4 mt-4 flex flex-row">
+			<header class="mb-3 lg:mb-4 2xl:mb-24 ml-1 md:ml-4 mt-4 flex flex-row">
 				<div class="w-4/5 text-3xl md:text-base">
 					<p on:click={selectHome}>Portfolio</p>
 				</div>
@@ -101,7 +101,7 @@
 			<div
 				class="flex flex-col mt-6 md:mt-0 lg:flex-row xs-mb-23 lg:mb-20 xl:mb-24 items-start pl-12 gap-15 lg:mx-12"
 			>
-				<div class="w-4/4 md:w-3/4">
+				<div class="w-full md:w-3/4">
 					<div class="flex project-body">
 						<!-- {#if isDefault} -->
 						<!-- <p>Test</p> -->
@@ -112,6 +112,7 @@
 									<svg
 										id="welcome_svg"
 										xmlns="http://www.w3.org/2000/svg"
+										class="w-full"
 										width="605.44"
 										height="122.24"
 										viewBox="0 0 1892 382"
@@ -181,7 +182,7 @@
 				</div>
 			</div>
 
-			<div class="absolute bottom-24 right-24 lg:bottom-20 lg:right-20 text-sm italic">
+			<div class="absolute bottom-0 md:bottom-16 right-24 lg:bottom-20 lg:right-20 text-sm italic">
 				<p>
 					&copy; {`${new Date().getFullYear()}`} Robin Lee
 				</p>
