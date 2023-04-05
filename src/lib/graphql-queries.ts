@@ -26,6 +26,10 @@ const PROJECT_FRAGMENT = gql`
 			url
 		}
 		summary
+		startDate
+		endDate
+		techStack
+		awards
 	}
 `;
 export const projectsQuery = gql`

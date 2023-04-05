@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div class="flex justify-center items-center sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">
-	<img class="rounded-lg" src={project.image[0].url} alt={project.title} width="250" height="250" />
+	<img class="rounded-lg" src={project.image[0].url} alt={project.title} width="350" height="250" />
 </div>
 
 <h1 class="text-4xl font-semibold mb-5">{project.name}</h1>
@@ -28,11 +28,23 @@
 
 <div class="mb-5 prose flex prose-a:text-primary hover:prose-a:text-primary-focus">
 	{#if project.demo}
-		<a class="mr-5" href={project.demo}>Demo</a>
+		<a class="mr-5" href={project.demo}>Project Paper</a>
 	{/if}
 	<a href={project.sourceCode}>Source Code</a>
 </div>
 
+<div class="mb-5 prose flex prose-a:text-primary hover:prose-a:text-primary-focus">
+	{project.startDate}
+	{#if project.endDate}
+		{project.endDate}
+	{/if}
+</div>
+
 <article class="absolute overflow-x-scroll">
+	<h1>Tech Stack</h1>
+	{@html marked(project.techStack)}
+	<h1>Project Description</h1>
 	{@html marked(project.description)}
+	<h1>Awards</h1>
+	{@html marked(project.awards)}
 </article>
