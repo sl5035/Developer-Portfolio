@@ -11,10 +11,12 @@
 </svelte:head>
 
 <div class="flex justify-center items-center sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">
-	<img class="rounded-lg" src={project.image[0].url} alt={project.title} width="350" height="250" />
+	<img class="rounded-lg" src={project.image[0].url} alt={project.title} width="350" height="200" />
 </div>
 
-<h1 class="text-4xl font-semibold mb-5">{project.name}</h1>
+<h1 class="flex text-5xl font-extrabold mb-5 relative">
+	<span>{project.name}</span>
+</h1>
 
 <div class="mb-5 flex justify-between">
 	<div>
@@ -33,18 +35,20 @@
 	<a href={project.sourceCode}>Source Code</a>
 </div>
 
-<div class="mb-5 prose flex prose-a:text-primary hover:prose-a:text-primary-focus">
-	{project.startDate}
+<div class="mb-5 prose prose-a:text-primary hover:prose-a:text-primary-focus text-ellipsis">
+	<p class="font-semibold">Start date: {project.startDate}</p>
 	{#if project.endDate}
-		{project.endDate}
+		<p class="font-semibold">End date: {project.endDate}</p>
 	{/if}
 </div>
 
 <article class="absolute overflow-x-scroll">
-	<h1>Tech Stack</h1>
-	{@html marked(project.techStack)}
-	<h1>Project Description</h1>
-	{@html marked(project.description)}
-	<h1>Awards</h1>
-	{@html marked(project.awards)}
+	<h1 class="text-3xl font-semibold">Tech Stack</h1>
+	<span class="">{@html marked(project.techStack)}</span>
+	<h1 class="text-3xl font-semibold mt-5">Project Description</h1>
+	<span>{@html marked(project.description)}</span>
+	{#if project.awards}
+		<h1 class="text-3xl font-semibold mt-5">Awards</h1>
+		<span class="text-center">{@html marked(project.awards)}</span>
+	{/if}
 </article>

@@ -10,32 +10,35 @@ const config = {
 						maxWidth: null
 					}
 				}
+			},
+			colors: {
+				'tokyo-blue': '#2ac3de'
 			}
 		},
 		fontFamily: {
-			'sans': ['"Montserrat-Regular"'],
+			sans: ['"Montserrat-Regular"']
 		}
 	},
 
 	daisyui: {
-		themes: [{
+		themes: [
+			{
 				tokyonightdark: {
-					primary: "#2ac3de",
-					secondary: "#7aa2f7",
-					accent: "#a9b1d6",
-					neutral: "#9aa5ce",
-					"base-100": "#1a1b26",
+					primary: '#2ac3de',
+					secondary: '#7aa2f7',
+					accent: '#a9b1d6',
+					neutral: '#9aa5ce',
+					'base-100': '#1a1b26'
 				},
 				tokyonightlight: {
-					primary: "#166775",
-					secondary: "#34548a",
-					accent: "#34548a",
-					neutral: "#565a6e",
-					"base-100": "#d5d6db",
-				},
-			},
-
-		],
+					primary: '#166775',
+					secondary: '#34548a',
+					accent: '#34548a',
+					neutral: '#565a6e',
+					'base-100': '#d5d6db'
+				}
+			}
+		]
 	},
 
 	plugins: [require('@tailwindcss/typography'), require('daisyui')]
