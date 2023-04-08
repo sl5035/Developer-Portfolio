@@ -115,7 +115,7 @@
 										class="w-full"
 										width="605.44"
 										height="122.24"
-										viewBox="0 0 1892 382"
+										viewBox="0 0 3092 382"
 										data-inlinesvg=".inlineSvgFile-7"
 										><path
 											id="welcome_path"
@@ -132,7 +132,7 @@
 									<h2 class="text-3xl md:text-xl mb-4 font-bold tracking-wider underline mt-6">
 										<a href="/about">{name}</a>
 									</h2>
-									<p class="text-2xl md:text-lg mb-4">{@html marked(intro)}</p>
+									<p class="text-base md:text-base mb-4">{@html marked(intro)}</p>
 								</span>
 							</div>
 
@@ -149,7 +149,7 @@
 								>
 									<span class={mainMessageClass}>
 										<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-										<p class="text-xl mb-4">{sProject.summary}</p>
+										<p class="text-sm mb-4">{sProject.summary}</p>
 										<button class="project-link text-2xl lg:text-base"
 											><a href="/projects/{slug}"> View </a></button
 										>
