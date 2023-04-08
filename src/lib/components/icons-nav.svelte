@@ -55,7 +55,7 @@
 			<a
 				aria-label="resume"
 				data-inlinesvg=".inlineSvgFile-3"
-				href="https://media.graphassets.com/N9MED3ORZe2cZIXTMDNs"
+				href="https://media.graphassets.com/YvnhDJX4TgS0Njj2ox66"
 			>
 				<svg
 					width="800px"
